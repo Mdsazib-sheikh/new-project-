@@ -4,24 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning javascript</title>
+    
     <style>
         body{
-            background-color: aquamarine;
+            background-color: rgb(255, 193, 127);
+        }
+        article{
+            border: 2px solid tomato;
+            border-radius: 10px;
+            margin: 5px;
+
         }
     </style>
 </head>
 <body>
 <main>
-    <section>
-        <h3>Exploring Dom</h3>
-        <p>hello javascript</p>
-    </section>
+<section>
+    <h3>Exploring DOM</h3>
+   <article>
+    <h3>article-1</h3>
+    <p class="author">author-1</p>
+    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam officia reprehenderit vero distinctio quae temporibus ad quas, natus sunt maiores facilis, placeat minus nisi iusto ab ipsum nobis at et!</p>
+   </article>
+   <article>
+    <h3>article-2</h3>
+    <p class="author">author-2</p>
+    <p class="description">Rerum quasi consequuntur vel placeat quo. Dolorem eaque et dolores possimus tenetur unde eveniet, inventore repellendus expedita? Distinctio, alias id! Sapiente optio atque hic? Sint ea exercitationem explicabo quibusdam ipsum.</p>
+   </article>
+   <article>
+    <h3>article-3</h3>
+    <p class="author">author-3</p>
+    <p class="description">Quam voluptatum dolore reiciendis saepe quisquam quia a eum molestias quo deleniti facilis repudiandae, dignissimos praesentium ipsa rem vitae atque corrupti dolor. Maxime error magni tempore quis in est debitis.</p>
+   </article>
+</section>
 </main>
-</main>
-    <script src="script.js"></script>
+<script>
+   
+ var authors = document.getElementsByClassName('author');
+for(var i = 0; i <authors.length; i++){
+    var element =authors[i];
+    console.log(element.innerHTML);
+    element.innerHTML ='lekhok-'+(i + 1);
+    element.style.backgroundColor='lightblue';
+    element.style.margin = '10px';
+   
 
-    <script>
-        // alert('i am learning javascript language ');
-    </script>
+} 
+</script>
+<script src="script.js"></script>
+
+    
 </body>
-</html>
+</html> 
