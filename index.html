@@ -15,18 +15,21 @@
             margin: 5px;
 
         }
+        .special h3{
+
+        }
     </style>
 </head>
 <body>
 <main>
 <section>
     <h3>Exploring DOM</h3>
-   <article>
+   <article id="first-article">
     <h3>article-1</h3>
     <p class="author">author-1</p>
     <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam officia reprehenderit vero distinctio quae temporibus ad quas, natus sunt maiores facilis, placeat minus nisi iusto ab ipsum nobis at et!</p>
    </article>
-   <article>
+   <article class="special">
     <h3>article-2</h3>
     <p class="author">author-2</p>
     <p class="description">Rerum quasi consequuntur vel placeat quo. Dolorem eaque et dolores possimus tenetur unde eveniet, inventore repellendus expedita? Distinctio, alias id! Sapiente optio atque hic? Sint ea exercitationem explicabo quibusdam ipsum.</p>
@@ -36,22 +39,39 @@
     <p class="author">author-3</p>
     <p class="description">Quam voluptatum dolore reiciendis saepe quisquam quia a eum molestias quo deleniti facilis repudiandae, dignissimos praesentium ipsa rem vitae atque corrupti dolor. Maxime error magni tempore quis in est debitis.</p>
    </article>
+   <article>
+    <h3>Grocery store</h3>
+    <ul id="gift-list">
+        <li>gift item-1</li>
+        <li>gift item-2</li>
+        <li>gift item-3</li>
+        <li>gift item-4</li>
+        <li>gift item-5</li>
+    </ul>
+   </article>
 </section>
 </main>
 <script>
    
- var authors = document.getElementsByClassName('author');
-for(var i = 0; i <authors.length; i++){
-    var element =authors[i];
-    console.log(element.innerHTML);
-    element.innerHTML ='lekhok-'+(i + 1);
-    element.style.backgroundColor='lightblue';
-    element.style.margin = '10px';
-   
+//  var authors = document.querySelectorAll('.special h3');
+// for(var i = 0; i <authors.length; i++){
+//     var element =authors[i];
+//     // console.log(element.innerHTML);
+//     element.innerHTML ='lekhok-'+(i + 1);
+//     element.setAttribute('title', 'all authors is the same');
+//     element.style.backgroundColor='lightblue';
+//     element.style.margin = '10px';
+const article = document.getElementById('first-article');
+const newParagraph = document.createElement('p');
+newParagraph.innerHTML = 'i am learning javascript';
+article.appendChild(newParagraph);
+   const ul = document.getElementById('gift-list');
+   const li = document.createElement('li')
+   li.innerHTML ='brand gift list';
 
-} 
+
 </script>
-<script src="script.js"></script>
+
 
     
 </body>
